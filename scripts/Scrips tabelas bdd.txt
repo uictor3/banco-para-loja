@@ -1,0 +1,39 @@
+Scrips banco de dados para loja
+
+CREATE TABLE cliente(
+ID SERIAL PRIMARY KEY,
+            nome VARCHAR(255) NOT NULL,
+	idade VARCHAR(255) NOT NULL,
+	cpf VARCHAR(255) NOT NULL UNIQUE,
+	endereco VARCHAR(255) NOT NULL,
+	telefone VARCHAR(255) NOT NULL,
+	email  VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE funcionario(
+ID SERIAL PRIMARY KEY,
+	nome VARCHAR(255) NOT NULL,
+	idade VARCHAR(255) NOT NULL,
+	telefone VARCHAR(255) NOT NULL,
+	email VARCHAR(255) NOT NULL,
+	cargo VARCHAR(255) NOT NUL
+);
+
+CREATE TABLE produto(
+ID SERIAL PRIMARY KEY,
+	peca VARCHAR(255) NOT NULL,
+	descricao TEXT,
+	quantidade INTEGER NOT NULL
+);
+
+CREATE TABLE pedidos(
+ID SERIAL PRIMARY KEY,
+	data_da_compra TIMESTAMP NOT NULL,
+	valor_total NUMERIC(10, 2) NOT NULL,
+	produto_id INTEGER NOT NULL,
+	FOREIGN KEY(produto_id) REFERENCES produto(id),
+	cliente_id INTEGER NOT NULL,
+	FOREIGN KEY(cliente_id) REFERENCES cliente(id),
+	funcionario_id INTEGER NOT NULL,
+	FOREIGN KEY(funcionario_id) REFERENCES funcionario(id)
+);

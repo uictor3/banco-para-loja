@@ -1,0 +1,20 @@
+INSERT INTO cliente (nome, idade, cpf, endereco, telefone, email) VALUES
+('Junior soares', 21, 12345678956, 'Rua Alegria, 123', '(11) 9999-9999', 'junior.soares@gmail.com'),
+('Mariana Silva', 32, 12345678932, 'Avenida campeão, 456', '(21) 8888-8888',,'mariana.slv@outlook.com.br'),
+('Charles Feitosa', 44, 12345678942, 'Rua esperança, 789', '(31) 7777-7777', 'charles.feitosa@gmail.com')
+
+
+INSERT INTO funcionario (nome, idade, telefone, email, cargo) VALUES
+('João da lapa', 23, '(11) 5555-5555', 'joao.silva@gmail.com', 'gerente'),
+('Maria de lourdes', 30, '(21) 8888-8888', 'maria.lrds@gmail.com.br', 'vendedora'),
+('Felipe Ferreira', 45, '(31) 7777-7777',  'carlos.ferreira@gmail.com', 'contador')
+
+INSERT INTO produtos (peca, descricao, quantidade) VALUES
+('short', 'jeans preto tam M', 8)
+('saia', 'filó rosa tam P', 7)
+('camiseta rick&morty', 'vermelha tam G', 9)
+
+INSERT INTO pedidos (data_da_compra, produto_id, valor_total, cliente_id, funcionario_id) VALUES
+('2023-01-01 12:34:56', 1, 12.50, 2, 2'),
+('2023-01-01 12:34:56', 2, 200.50, 3, 2),
+('2023-01-01 12:34:56', 3, 37.70, 1,  2)
